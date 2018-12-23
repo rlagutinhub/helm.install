@@ -45,6 +45,9 @@ if [ $? -ne 0 ]; then
     echo "    wget https://storage.googleapis.com/kubernetes-helm/helm-v2.12.1-linux-amd64.tar.gz"
     echo "    mkdir -p ~/helm-setup; tar xvzfp helm-v2.12.1-linux-amd64.tar.gz -C ~/helm-setup/"
     echo "    cp -p ~/helm-setup/linux-amd64/helm /usr/local/bin/"
+    echo
+    echo "install helm plugin for push charts to the repository:"
+    echo "    helm plugin install https://github.com/chartmuseum/helm-push"
     exit 1
 
 fi
